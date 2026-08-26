@@ -1,12 +1,10 @@
 [project]
 name = "cli-input-validator"
-version = "0.1.0"
+version = "0.1.1"
 description = "Small, reusable helpers for validating command-line input."
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [
-    { name = "Mayowa Pitan" },
-]
+authors = [{ name = "Mayowa Pitan" }]
 license = "MIT"
 license-files = ["LICENSE"]
 dependencies = []
@@ -17,9 +15,7 @@ Repository = "https://github.com/VanPaitin/cli-input-validator"
 Issues = "https://github.com/VanPaitin/cli-input-validator/issues"
 
 [project.optional-dependencies]
-test = [
-    "pytest>=8.0",
-]
+test = ["pytest>=8.0"]
 
 [build-system]
 requires = ["setuptools>=77.0.0"]
