@@ -11,6 +11,11 @@ license = "MIT"
 license-files = ["LICENSE"]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/VanPaitin/cli-input-validator"
+Repository = "https://github.com/VanPaitin/cli-input-validator"
+Issues = "https://github.com/VanPaitin/cli-input-validator/issues"
+
 [project.optional-dependencies]
 test = [
     "pytest>=8.0",

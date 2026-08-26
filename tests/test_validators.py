@@ -4,9 +4,9 @@ from cli_input_validator import (
     DEFAULT_NAME_ERROR,
     VALID,
     get_valid_choice,
+    get_valid_name,
     get_validated_input,
     name_validator,
-    verify_name_integrity,
 )
 
 
@@ -50,10 +50,10 @@ def test_name_validator_rejects_invalid_names(name):
     assert name_validator(name) == (False, DEFAULT_NAME_ERROR)
 
 
-def test_verify_name_integrity_accepts_a_custom_input_function():
+def test_get_valid_name_accepts_a_custom_input_function():
     read = input_from(["123", "Mayowa"])
 
-    assert verify_name_integrity("Name: ", input_function=read) == "Mayowa"
+    assert get_valid_name("Name: ", input_function=read) == "Mayowa"
 
 
 def test_get_valid_choice_is_case_insensitive_by_default():

@@ -37,27 +37,19 @@ def get_validated_input(
     return validate
 
 
-def name_validator(
-    name: str,
-    error_message: str = DEFAULT_NAME_ERROR,
-) -> ValidationResult:
+def name_validator(name: str) -> ValidationResult:
     """Validate a non-empty name containing letters, spaces, or hyphens."""
     is_valid = bool(name.strip()) and re.fullmatch(r"[A-Za-z\s-]+", name) is not None
-    return VALID if is_valid else (False, error_message)
+    return VALID if is_valid else (False, DEFAULT_NAME_ERROR)
 
 
-def verify_name_integrity(
+def get_valid_name(
     prompt: str,
     *,
     input_function: InputFunction | None = None,
-    error_message: str = DEFAULT_NAME_ERROR,
 ) -> str:
     """Prompt repeatedly until the user enters a valid name."""
-
-    def validator(name: str) -> ValidationResult:
-        return name_validator(name, error_message)
-
-    return get_validated_input(validator, input_function)(prompt)
+    return get_validated_input(name_validator, input_function)(prompt)
 
 
 def get_valid_choice(
