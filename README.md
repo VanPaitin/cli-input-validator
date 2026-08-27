@@ -1,5 +1,7 @@
 # cli-input-validator
 
+[![CI](https://github.com/VanPaitin/cli-input-validator/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/VanPaitin/cli-input-validator/actions/workflows/pylint.yml)
+
 Small, reusable helpers for validating interactive command-line input in Python.
 The package repeatedly prompts until the user enters a valid value, while
 letting you control the validation rules, error messages, and input function.
