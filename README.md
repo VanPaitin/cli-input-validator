@@ -8,8 +8,16 @@ letting you control the validation rules, error messages, and input function.
 
 ## Installation
 
+Add it to a project managed by `uv`:
+
 ```bash
-pip install cli-input-validator
+uv add cli-input-validator
+```
+
+Or install it with `pip`:
+
+```bash
+python -m pip install cli-input-validator
 ```
 
 ## Quick start
@@ -175,7 +183,7 @@ validator and pass it to `get_validated_input()`.
 - `get_validated_input(is_valid=None, input_function=None)` creates a reusable
   prompting function from a validator.
 - `get_valid_choice(choices, prompt="", case_sensitive=False,
-  input_function=None)` prompts for one of a collection of values.
+input_function=None)` prompts for one of a collection of values.
 - `get_valid_name(prompt, input_function=None)` prompts for a supported name.
 - `name_validator(name)` validates a name without prompting.
 - `VALID` is the convenience result `(True, None)`.
